@@ -9,7 +9,7 @@ const Styles = styled.div`
 
   table {
     border-spacing: 0;
-    border: 1px solid black;
+    border: 1px solid lightgray;
 
     tr {
       :last-child {
