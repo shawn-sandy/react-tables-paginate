@@ -107,10 +107,18 @@ function Table({ columns, data }) {
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {"<"}
         </button>{" "}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
+        <button
+          type="button"
+          onClick={() => nextPage()}
+          disabled={!canNextPage}
+        >
           {">"}
         </button>{" "}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+        <button
+          type="button"
+          onClick={() => gotoPage(pageCount - 1)}
+          disabled={!canNextPage}
+        >
           {">>"}
         </button>{" "}
         <span>
@@ -123,6 +131,7 @@ function Table({ columns, data }) {
           | Go to page:{" "}
           <input
             type="number"
+            id="go-to"
             defaultValue={pageIndex + 1}
             onChange={(e) => {
               const page = e.target.value ? Number(e.target.value) - 1 : 0;
